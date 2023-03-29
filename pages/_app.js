@@ -18,6 +18,20 @@ const App = ({ Component, pageProps }) => {
       }&display=swap`
     ).then((res) => res.text().then((css) => setFontcss(css)));
   }, [pf, sf]);
+ 
+  // added per https://www.makeuseof.com/nextjs-google-analytics/ for GA
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+ 
+    router.events.on("routeChangeComplete", handleRouteChange);
+ 
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   // google tag manager (gtm)
   const tagManagerArgs = {
@@ -43,6 +57,21 @@ const App = ({ Component, pageProps }) => {
           dangerouslySetInnerHTML={{
             __html: `${fontcss}`,
           }}
+        />
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></Script>
+        <Script
+          id='google-analytics'
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CMP42YW7CX', {
+                page_path: window.location.pathname,
+              });
+            `,
+            }}
         />
         {/* responsive meta */}
         <meta
