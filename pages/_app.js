@@ -64,7 +64,7 @@ const App = ({ Component, pageProps }) => {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
       </Head>
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-CMP42YW7CX"></Script>
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-CMP42YW7CX" />
         <Script
           id="google-analytics"
           strategy="afterInteractive"
