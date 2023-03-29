@@ -58,7 +58,13 @@ const App = ({ Component, pageProps }) => {
             __html: `${fontcss}`,
           }}
         />
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></Script>
+        {/* responsive meta */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+        />
+      </Head>
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></Script>
         <Script
           id='google-analytics'
           strategy="afterInteractive"
@@ -73,12 +79,6 @@ const App = ({ Component, pageProps }) => {
             `,
             }}
         />
-        {/* responsive meta */}
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=5"
-        />
-      </Head>
       <Component {...pageProps} />
     </JsonContext>
   );
