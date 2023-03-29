@@ -1,6 +1,6 @@
 ---
 title: Hapa Dad
-image: /images/authors/hapa-dad.png.jpg
+image: /images/authors/hapa-dad.png
 description: Hapa Dad is half japanese, 100% awesome
 social:
   facebook: https://www.facebook.com/
