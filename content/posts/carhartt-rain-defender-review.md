@@ -2,7 +2,7 @@
 title: "Carhartt keeps Hapa Dad cozy and dry"
 description: "Neither rain, fizz sticks, blood nor vomit can beat this jacket"
 date: 2023-03-29T05:00:00Z
-image: "/images/posts/carhartt-rain-defender.png"
+image: "/images/posts/carhartt-rain-defender.webp"
 categories: ["review"]
 authors: ["Hapa Dad"]
 tags: ["carhartt", "review", "clothing"]
