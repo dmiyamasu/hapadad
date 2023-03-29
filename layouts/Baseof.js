@@ -88,7 +88,7 @@ const Base = ({
           content={`${base_url}${image ? image : meta_image}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="ir-site-verification-token" value="1054774553" />
+        <meta name="ir-site-verification-token" value="1054799121" />
       </Head>
       <Header />
       {/* main site */}
